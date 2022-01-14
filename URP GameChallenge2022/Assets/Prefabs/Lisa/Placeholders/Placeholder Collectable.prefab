@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1023951907541256436}
   - component: {fileID: 1023951907541256443}
   - component: {fileID: 1023951907541256438}
+  - component: {fileID: 341739129}
   m_Layer: 8
   m_Name: Placeholder Collectable
   m_TagString: Collectable
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023951907541256441}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.68, y: 0.5, z: 9.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -112,3 +113,16 @@ MonoBehaviour:
   happyMaterial: {fileID: 0}
   sadMaterial: {fileID: 2100000, guid: 101c6243809f91343b751cf6021dc9c4, type: 2}
   optimismGlasses: {fileID: 0}
+--- !u!114 &341739129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023951907541256441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96ea40e31c6d904282925367821295c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 460f08ab0550ae94fb750f7228f37b23, type: 2}

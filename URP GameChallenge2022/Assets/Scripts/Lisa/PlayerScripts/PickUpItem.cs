@@ -2,9 +2,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+/// <Author>
+/// Lisa Werner
+/// </Author>
 public class PickUpItem : MonoBehaviour
 {
     [SerializeField] private float grabDistance = 2f;
+    public Player player;
 
     private void Update()
     {
@@ -14,11 +18,14 @@ public class PickUpItem : MonoBehaviour
         {
             RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, transform.forward * grabDistance, out hit, grabDistance) && hit.transform.gameObject.layer == 8) // Layer 8 is the collectable layer
+            if (Physics.Raycast(transform.position, transform.forward * grabDistance, out hit, grabDistance) && hit.transform.gameObject.tag == "Collectable")
             {
-                // Todo: Add object to inventory
-                print("Found an object: " + hit.transform.gameObject.name);
-                Destroy(hit.transform.gameObject);
+                var collectingItem = hit.transform.gameObject.GetComponent<Item>();
+                if (collectingItem)
+                {
+                    player.inventory.AddItem(collectingItem.item, 1);
+                    Destroy(hit.transform.gameObject);
+                }
             }
         }
     }

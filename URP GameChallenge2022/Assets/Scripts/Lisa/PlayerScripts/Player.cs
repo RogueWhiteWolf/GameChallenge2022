@@ -2,8 +2,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+/// <Author>
+/// Lisa Werner
+/// </Author>
 public class Player : MonoBehaviour
 {
+    public InventoryObject inventory;
+
     private OptimismGlasses optimismGlasses;
 
     private void Awake()
@@ -19,4 +24,8 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnApplicationQuit()
+    {
+        inventory.Container.Clear();
+    }
 }
