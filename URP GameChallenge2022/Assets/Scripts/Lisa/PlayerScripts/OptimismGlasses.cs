@@ -6,13 +6,11 @@ public class OptimismGlasses : MonoBehaviour
 {
     public GameObject hiddenObjects;
 
-    [SerializeField] private float optimismCooldown = 3f;
-    [SerializeField] private Player player;
+    [SerializeField] private float optimismCooldown = 3f; //Connect this with stamina
     [SerializeField] public bool IsActivated { get; private set; }
 
     private void Awake()
     {
-        player = gameObject.GetComponent<Player>();
         IsActivated = false;
     }
     public void UseGlasses()
