@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class AudioBackground : MonoBehaviour
 {
+    float timePassed;
+    bool shouldTime;
     //public OptimismGlasses optimismGlasses;
     //public AudioClip thisAudioClip;
     public AudioSource pessimisticAudioSource;
@@ -29,7 +31,7 @@ public class AudioBackground : MonoBehaviour
         optimisticAudioSource = GetComponent<AudioSource>();
 
         pessimisticAudioSource.Play();
-        optimisticAudioSource.Pause();
+        //optimisticAudioSource.Pause();
 
         pausedPessimistic = false;
         pausedOptimistic = true;
@@ -44,19 +46,30 @@ public class AudioBackground : MonoBehaviour
         {
             UseOptimisticMusic();
         }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            shouldTime = true;
+            UseOptimisticMusic();
+        }
+        if (shouldTime == true)
+        {
+            timePassed += Time.deltaTime;
+        }
+        if (timePassed >= 5f)
+        {
+            shouldTime = false;
+            timePassed = 0;
+            UsePessimisticMusic();
+        }
     }
     public void UseOptimisticMusic()
     {
         pausedOptimistic = false;
         pausedPessimistic = true;
-        optimisticAudioSource.UnPause();
+        optimisticAudioSource.Play();
         pessimisticAudioSource.Pause();
-        StartCoroutine(MusicCooldown());
-    }
-    IEnumerator MusicCooldown()
-    {
-        yield return new WaitForSeconds(3f);
-        UsePessimisticMusic();
+        //StartCoroutine(MusicCooldown());
     }
     public void UsePessimisticMusic()
     {
@@ -65,5 +78,10 @@ public class AudioBackground : MonoBehaviour
         pessimisticAudioSource.UnPause();
         optimisticAudioSource.Stop();
         Debug.Log("Optimistic music paused");
+    }
+    IEnumerator MusicCooldown()
+    {
+        UsePessimisticMusic();
+        yield return new WaitForSeconds(3f);
     }
 }
