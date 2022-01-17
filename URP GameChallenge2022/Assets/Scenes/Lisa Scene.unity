@@ -529,8 +529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3bb916827049549b1646989cec4afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 0}
-  happyMaterial: {fileID: 0}
   sadMaterial: {fileID: 2100000, guid: 101c6243809f91343b751cf6021dc9c4, type: 2}
   optimismGlasses: {fileID: 2991237831291774769}
 --- !u!1001 &1506839989
@@ -886,8 +884,38 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2059468852}
+    - target: {fileID: 3739223488287707842, guid: 5945e5849477da14e95bedab03096f60, type: 3}
+      propertyPath: m_CustomSkybox
+      value: 
+      objectReference: {fileID: 2100000, guid: be066a514eae21642a0fbe4f3e9ff6ff, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5945e5849477da14e95bedab03096f60, type: 3}
+--- !u!1 &2991237831291774764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2991237832853060065, guid: 5945e5849477da14e95bedab03096f60, type: 3}
+  m_PrefabInstance: {fileID: 2991237831291774763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!45 &2991237831291774765 stripped
+Skybox:
+  m_CorrespondingSourceObject: {fileID: 3739223488287707842, guid: 5945e5849477da14e95bedab03096f60, type: 3}
+  m_PrefabInstance: {fileID: 2991237831291774763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2991237831291774766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991237831291774764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 839ec1c6285d526478317cb7589d81d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skybox: {fileID: 2991237831291774765}
+  happyMaterial: {fileID: 2100000, guid: be066a514eae21642a0fbe4f3e9ff6ff, type: 2}
+  sadMaterial: {fileID: 2100000, guid: 50b79a6bb6a219744a1790e9c300c5f4, type: 2}
+  optimismGlasses: {fileID: 2991237831291774769}
 --- !u!114 &2991237831291774769 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2991237831291774769, guid: 5945e5849477da14e95bedab03096f60, type: 3}

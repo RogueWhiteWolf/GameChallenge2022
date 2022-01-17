@@ -2,10 +2,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+/// <Author>
+/// Lisa Werner
+/// </Author>
 public class MaterialToggler : MonoBehaviour
 {
-    [SerializeField] private Renderer renderer;
-    [SerializeField] private Material happyMaterial;
+    private Renderer renderer;
+    private Material happyMaterial;
 
     public Material sadMaterial;
 

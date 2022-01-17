@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406eede23a4e0b9458ea8f400b221a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
 --- !u!114 &2991237831291774769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hiddenObjects: {fileID: 0}
   optimismCooldown: 3
+  maxHealth: 100
+  currentHealth: 0
+  hpbar: {fileID: 0}
 --- !u!1 &2991237831600551280
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +227,7 @@ GameObject:
   - component: {fileID: 2991237832853060064}
   - component: {fileID: 2991237832853060069}
   - component: {fileID: 2991237832853060070}
+  - component: {fileID: 3739223488287707842}
   - component: {fileID: 2991237832853060071}
   - component: {fileID: 2991237832853060091}
   - component: {fileID: 2991237832853060068}
@@ -298,6 +303,15 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2991237832853060065}
   m_Enabled: 1
+--- !u!45 &3739223488287707842
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991237832853060065}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
 --- !u!114 &2991237832853060071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,3 +371,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabDistance: 2
+  player: {fileID: 0}
