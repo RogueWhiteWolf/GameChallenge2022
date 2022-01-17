@@ -35542,6 +35542,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1728421746}
+    - target: {fileID: 3739223488287707842, guid: 5945e5849477da14e95bedab03096f60, type: 3}
+      propertyPath: m_CustomSkybox
+      value: 
+      objectReference: {fileID: 2100000, guid: be066a514eae21642a0fbe4f3e9ff6ff, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5945e5849477da14e95bedab03096f60, type: 3}
 --- !u!114 &1728421745 stripped
@@ -35566,36 +35570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406eede23a4e0b9458ea8f400b221a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1728421747 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2991237832853060065, guid: 5945e5849477da14e95bedab03096f60, type: 3}
-  m_PrefabInstance: {fileID: 1728421744}
-  m_PrefabAsset: {fileID: 0}
---- !u!45 &1728421749
-Skybox:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728421747}
-  m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: 50b79a6bb6a219744a1790e9c300c5f4, type: 2}
---- !u!114 &1728421750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728421747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c3bb916827049549b1646989cec4afe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renderer: {fileID: 0}
-  happyMaterial: {fileID: 2100000, guid: be066a514eae21642a0fbe4f3e9ff6ff, type: 2}
-  sadMaterial: {fileID: 2100000, guid: 50b79a6bb6a219744a1790e9c300c5f4, type: 2}
-  optimismGlasses: {fileID: 1728421745}
 --- !u!1001 &1728732895
 PrefabInstance:
   m_ObjectHideFlags: 0
